@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                 xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                 xmlns:tools="http://schemas.android.com/tools"
+                                                 android:layout_width="match_parent"
+                                                 android:layout_height="match_parent">
+
+        <ViewSwitcher
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:padding="8dp"
+                      android:id="@+id/view_switcher">
+
+            <ProgressBar
+                android:id="@+id/progress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_gravity="center"
+                android:indeterminate="true"/>
+
+            <!--<include layout="@layout/content_forecast" />-->
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/dish_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </ViewSwitcher>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/add_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_plus"
+            android:layout_gravity="bottom|right"
+            android:layout_margin="18dp"
+            />
+</android.support.design.widget.CoordinatorLayout>

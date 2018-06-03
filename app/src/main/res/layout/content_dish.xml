@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="16dp"
+    android:layout_margin="8dp"
+    app:cardElevation="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/default_padding"
+        tools:context=".fragment.DishFragment">
+
+
+        <TextView
+            android:id="@+id/dish_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            tools:text="Nombre plato"/>
+
+        <ImageView
+            android:id="@+id/dish_image"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dish_name"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:contentDescription="Imagen del plato"
+            app:srcCompat="@drawable/lentejas"/>
+
+        <include
+            android:id="@+id/dish_allergens"
+            layout="@layout/allergens"
+            android:layout_width="wrap_content"
+            android:layout_height="107dp"
+            android:layout_below="@id/dish_name"
+            android:layout_marginBottom="@dimen/slim_margin"
+            android:layout_marginEnd="@dimen/slim_margin"
+            android:layout_marginStart="@dimen/slim_margin"
+            android:layout_marginTop="@dimen/slim_margin"
+            android:layout_toEndOf="@id/dish_image"
+            android:layout_toRightOf="@+id/dish_image"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/dish_name"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/dish_personalization"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/dish_image"
+            android:layout_marginTop="18dp"
+            tools:text="Personalización del plato"/>
+
+        <TextView
+            android:id="@+id/dish_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/dish_personalization"
+            android:layout_marginTop="@dimen/slim_margin"
+            tools:text="Descripción del plato"/>
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

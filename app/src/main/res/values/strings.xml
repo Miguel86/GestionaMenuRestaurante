@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">GestionaMenuRestaurante</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="transition_to_dish_detail">transition_to_dish_detail</string>
+    <string name="title_activity_configure_dish">ConfigureDishActivity</string>
+    <string name="bill_amount">Total de factura: %.2f €</string>
+    <string name="calc_bill">Calcular cuenta</string>
+    <string name="personalization">Personalización</string>
+    <string name="configure_dish_description">Esta es la descripción del plato que puede ser larga o corta, eso dependera de cuanto de larga sea la receta.</string>
+    <string name="personalization_value">Notas para el chef: %s</string>
+    <string name="alergen">Alérgeno</string>
+</resources>

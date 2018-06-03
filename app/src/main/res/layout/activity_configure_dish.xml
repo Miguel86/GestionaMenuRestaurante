@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ConfigureDishActivity">
+
+    <TextView
+        android:id="@+id/configure_dish_name"
+        android:layout_width="@dimen/zero"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/default_margin"
+        android:layout_marginLeft="@dimen/default_margin"
+        android:layout_marginRight="@dimen/default_margin"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginTop="@dimen/slim_margin"
+        android:text="Título plato"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteY="16dp"/>
+
+    <ImageView
+        android:id="@+id/configure_dish_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/default_margin"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginTop="64dp"
+        android:contentDescription="Dish photo"
+        android:src="@drawable/lentejas"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <include
+        android:id="@+id/configure_dish_allergens"
+        layout="@layout/allergens"
+        android:layout_width="@dimen/zero"
+        android:layout_height="@dimen/zero"
+
+        android:layout_marginEnd="@dimen/slim_margin"
+        android:layout_marginLeft="@dimen/slim_margin"
+        android:layout_marginRight="@dimen/slim_margin"
+        android:layout_marginStart="@dimen/slim_margin"
+        android:layout_marginTop="@dimen/slim_margin"
+        app:layout_constraintBottom_toBottomOf="@+id/configure_dish_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/configure_dish_image"
+        app:layout_constraintTop_toTopOf="@+id/configure_dish_image"/>
+
+
+    <TextView
+        android:id="@+id/configure_dish_description"
+        android:layout_width="@dimen/zero"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/slim_margin"
+        android:layout_marginLeft="@dimen/slim_margin"
+        android:layout_marginRight="@dimen/slim_margin"
+        android:layout_marginStart="@dimen/slim_margin"
+        android:layout_marginTop="@dimen/slim_margin"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/configure_dish_image"
+        tools:text="@string/configure_dish_description"/>
+
+
+    <EditText
+        android:id="@+id/configure_dish_personalization"
+        android:layout_width="@dimen/zero"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/slim_margin"
+        android:layout_marginLeft="@dimen/slim_margin"
+        android:layout_marginRight="@dimen/slim_margin"
+        android:layout_marginStart="@dimen/slim_margin"
+        android:layout_marginTop="@dimen/default_margin"
+        android:hint="@string/personalization"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/configure_dish_description"/>
+
+    <Button
+        android:id="@+id/cancel_btn"
+        android:layout_width="@dimen/zero"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/default_margin"
+        android:layout_marginTop="@dimen/slim_margin"
+        android:text="@android:string/cancel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ok_btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/configure_dish_personalization"
+        app:layout_constraintVertical_bias="1.0"/>
+
+    <Button
+        android:id="@+id/ok_btn"
+        android:layout_width="@dimen/zero"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/default_margin"
+        android:text="@android:string/ok"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/cancel_btn"
+        app:layout_constraintTop_toTopOf="@+id/cancel_btn"/>
+
+</android.support.constraint.ConstraintLayout>
